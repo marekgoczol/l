@@ -1,0 +1,8 @@
+node_modules/
+bower_components/
+assets/js/vendors.js
+assets/js/vendors.min.js
+assets/js/main.min.js
+
+.DS_Store
+.sass-cache

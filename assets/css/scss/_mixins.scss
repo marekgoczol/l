@@ -1,0 +1,90 @@
+@mixin background-size($value) {
+	-webkit-background-size: $value;
+	background-size: $value;
+}
+
+// Rounded Corners
+@mixin rounded($radius) {
+	-webkit-border-radius: ($radius) + px;
+	-moz-border-radius: ($radius) + px;
+	border-radius: ($radius) + px;
+}
+
+@mixin box-sizing($type) {
+    /* Acceptable values are border, content, and padding - content is the default W3C model */
+    box-sizing: #{$type}-box;
+    -webkit-box-sizing: #{$type}-box;
+    -moz-box-sizing: #{$type}-box;
+}
+
+@mixin transition($duration) {
+	-moz-transition: $duration;
+	-ms-transition: $duration;
+	-o-transition: $duration;
+	-webkit-transition: $duration;
+	transition: $duration;
+}
+
+@mixin transition-delay($delay) {
+	-moz-transition-delay: $delay;
+	-ms-transition-delay: $delay;
+	-o-transition-delay: $delay;
+	-webkit-transition-delay: $delay;
+	transition-delay: $delay;
+}
+
+@mixin opacity($opacity) {
+	opacity: $opacity / 100;
+	filter: alpha(opacity=$opacity);
+}
+
+@mixin hide-text() {
+	text-indent: 100%;
+	overflow: hidden;
+	white-space: nowrap;
+}
+
+@mixin prefixer ($property, $value, $prefixes) {
+	@each $prefix in $prefixes {
+		@if $prefix == webkit {
+			@if $prefix-for-webkit {
+				-webkit-#{$property}: $value;
+			}
+		}
+		@else if $prefix == moz {
+			@if $prefix-for-mozilla {
+				-moz-#{$property}: $value;
+			}
+		}
+		@else if $prefix == ms {
+			@if $prefix-for-microsoft {
+				-ms-#{$property}: $value;
+			}
+		}
+		@else if $prefix == o {
+			@if $prefix-for-opera {
+				-o-#{$property}: $value;
+			}
+		}
+		@else if $prefix == spec {
+			@if $prefix-for-spec {
+				#{$property}: $value;
+			}
+		}
+		@else  {
+			@warn "Unrecognized prefix: #{$prefix}";
+		}
+	}
+}
+
+@mixin transform($property: none) {
+	@include prefixer(transform, $property, webkit moz ms o spec);
+}
+
+@mixin modules-padding() {
+	padding: 0 1em;
+	@include box-sizing(border);
+	@include min-screen($tablet-portrait) {
+		padding: 0 2em;
+	}
+}
