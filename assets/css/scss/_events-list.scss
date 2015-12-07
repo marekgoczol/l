@@ -1,0 +1,217 @@
+.events-list {
+    padding: 16px;
+}
+
+.view-type {
+    width: 100%;
+    text-align: center;
+
+    .events-list-nav {
+        margin: 0 0 24px;
+        padding: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+            width: 50%;
+            position: relative;
+
+            a {
+                display: block;
+                padding: 12px 2px;
+                background: $light-gray;
+                color: $black;
+                font-size: 14px;
+                font-weight: 300;
+                text-decoration: none;
+                text-transform: uppercase;
+
+                @include min-screen($tablet-landscape) {
+                    font-size: 18px;
+                }
+
+                @include min-screen($desktop) {
+                    font-size: 22px;
+                }
+            }
+
+            &.selected {
+                a {
+                    background-color: $white;
+                    &:after {
+                        display: block;
+                        width: 35px;
+                        height: 8px;
+                        margin: 0 auto;
+                        content: '';
+                        background: transparent url('../images/white-arrow-down.png') center bottom no-repeat;
+                        position: absolute;
+                        bottom: -8px;
+                        right: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.date-picker {
+    display: inline-block;
+    margin-bottom: 6px;
+    position: relative;
+    width: 100%;
+
+    input {
+        display: block;
+        width: 100%;
+        padding: 8px 16px;
+        border: 0;
+        font-size: 18px;
+        text-transform: capitalize;
+
+        @include box-sizing(border);
+
+        &:focus {
+            outline: 0;
+        }
+    }
+
+
+    @include min-screen($tablet-portrait) {
+        input {
+            width: 420px;
+        }
+    }
+
+    .icon {
+        display: block;
+        width: 60px;
+        height: 100%;
+        padding: 2px 10px;
+        font-size: 24px;
+        background: $yellow url('../images/cal-icon-down.png') 40px center no-repeat;
+        background-size: 12px auto;
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include box-sizing(border);
+
+        @include min-screen($tablet-portrait) {
+            width: 120px;
+            right: auto;
+            left: 300px;
+            background-image: none;
+        }
+
+        .label {
+            display: none;
+
+            @include min-screen($tablet-portrait) {
+                display: inline-block;
+                font-size: 18px;
+                white-space: nowrap;
+                overflow: visible;
+            }
+        }
+    }
+}
+
+.events {
+    .event-item {
+        display: block;
+        margin-bottom: 6px;
+        padding: 8px;
+        background-color: $white;
+        position: relative;
+        color: $dark-text;
+
+        @include min-screen($tablet-portrait) {
+            margin-bottom: 10px;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        .event-club-pic {
+            display: none;
+            float: left;
+            max-width: 50px;
+            margin-right: 12px;
+
+            @include min-screen($tablet-portrait) {
+                display: block;
+            }
+
+            @include min-screen($full-hd) {
+                max-width: 72px;
+            }
+        }
+
+        .mobile-event-image {
+            @include min-screen($tablet-portrait) {
+                display: none;
+            }
+        }
+
+        .event-image {
+            display: none;
+
+            @include min-screen($tablet-portrait) {
+                display: block;
+            }
+        }
+
+        .event-name {
+            font-size: 18px;
+            margin: 0 0 5px;
+            padding: 0 0 5px;
+            border-bottom: 1px solid #b8b8b8;
+        }
+
+        .event-location {
+            font-size: 12px;
+            margin: 0 0 5px;
+            padding: 0 0 5px;
+            border-bottom: 1px solid #b8b8b8;
+
+            @include min-screen($tablet-portrait) {
+                border-bottom: 0;
+                margin: 0;
+                padding: 0;
+            }
+
+            strong {
+                display: block;
+                margin: 0;
+            }
+        }
+
+        .event-distance-label {
+            display: none;
+
+            @include min-screen($tablet-portrait) {
+                display: inline;
+            }
+        }
+
+        .event-distance {
+            font-size: 12px;
+            margin: 0;
+        }
+
+        .guests {
+            margin: 0;
+            position: absolute;
+            right: 10px;
+            bottom: 6px;
+            font-size: 12px;
+
+            @include min-screen($tablet-portrait) {
+                bottom: 7px;
+            }
+        }
+    }    
+}

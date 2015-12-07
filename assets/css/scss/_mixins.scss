@@ -80,11 +80,3 @@
 @mixin transform($property: none) {
 	@include prefixer(transform, $property, webkit moz ms o spec);
 }
-
-@mixin modules-padding() {
-	padding: 0 1em;
-	@include box-sizing(border);
-	@include min-screen($tablet-portrait) {
-		padding: 0 2em;
-	}
-}

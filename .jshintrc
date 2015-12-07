@@ -1,0 +1,11 @@
+{
+  "undef": true,
+  "globals": {
+    "window": false,
+    "navigator": false,
+    "document": false,
+    "console": false,
+    "alert": false,
+    "$": false
+  }
+}

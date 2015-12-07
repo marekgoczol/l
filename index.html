@@ -1,23 +1,381 @@
 <!doctype html>
-<html class="no-js" lang="">
+<html>
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
+        <title>Lover</title>
         <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <link rel="stylesheet" href="assets/css/style.css">
-        <script src="assets/js/bower_components/modernizr/modernizr.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,300&subset=latin,latin-ext" rel="stylesheet">
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     </head>
-    <body>
-        <h1>Debio</h1>
-        
-        <!-- livereload script goes here -->
-        <!-- remove in production -->
-        <script src="//.../livereload.js"></script>
 
-        <script src="/assets/js/vendors.min.js"></script>
-        <script src="/assets/js/main.js"></script>
+    <body>
+
+        <div class="content">
+            <section class="events-list">
+
+                <nav class="view-type">
+                    <ul class="grid grid--full events-list-nav">
+                        <li class="grid__item one-half selected"><a href="#"><i class="fa fa-list"></i> Lista imprez</a></li>
+                        <li class="grid__item one-half"><a href="#"><i class="fa fa-map-o"></i> Mapa</a></li>
+                    </ul>
+                </nav>
+
+                <div class="date-picker">
+                    <input type="text" class="datepicker">
+                    <span class="icon">
+                        <i class="fa fa-calendar"></i>
+                        <span class="label">Wybierz</span>
+                    </span>
+                </div>
+
+                <div class="events grid grid--narrow">
+
+                    <article class="grid__item tablet-portrait--one-half tablet-landscape--one-third desktop--one-quarter wide-desktop--one-fifth">
+                        <a href="#" class="event-item">
+                            <div class="grid grid--narrow">
+                                <div class="grid__item one-third tablet-portrait--one-whole">
+                                    <img src="assets/images/event-mobile-1.jpg" alt="Event Name" class="mobile-event-image">
+                                    <img src="assets/images/event-1.jpg" alt="Event Name" class="event-image">
+                                </div>
+
+                                <div class="grid__item two-thirds tablet-portrait--one-whole">
+                                    <h3 class="event-name">Dorly and Friends</h3>
+
+                                    <div class="event-club-pic">
+                                        <img src="assets/images/club-icon.jpg" alt="Energy 2000">
+                                    </div>
+
+                                    <p class="event-location">
+                                        <strong>The Ministry of Sound</strong>
+                                        London, Lamberth
+                                    </p>
+                                    <p class="event-distance">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span class="event-distance-label">Distance: </span>
+                                        1.2 km
+                                    </p>
+                                    <p class="guests">
+                                        <i class="fa fa-user"></i>
+                                        250
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="grid__item tablet-portrait--one-half tablet-landscape--one-third desktop--one-quarter wide-desktop--one-fifth">
+                        <a href="#" class="event-item">
+                            <div class="grid grid--narrow">
+                                <div class="grid__item one-third tablet-portrait--one-whole">
+                                    <img src="assets/images/event-mobile-1.jpg" alt="Event Name" class="mobile-event-image">
+                                    <img src="assets/images/event-1.jpg" alt="Event Name" class="event-image">
+                                </div>
+
+                                <div class="grid__item two-thirds tablet-portrait--one-whole">
+                                    <h3 class="event-name">Dorly and Friends</h3>
+
+                                    <div class="event-club-pic">
+                                        <img src="assets/images/club-icon-2.jpg" alt="Spiż">
+                                    </div>
+
+                                    <p class="event-location">
+                                        <strong>The Ministry of Sound</strong>
+                                        London, Lamberth
+                                    </p>
+                                    <p class="event-distance">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span class="event-distance-label">Distance: </span>
+                                        1.2 km
+                                    </p>
+                                    <p class="guests">
+                                        <i class="fa fa-user"></i>
+                                        250
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="grid__item tablet-portrait--one-half tablet-landscape--one-third desktop--one-quarter wide-desktop--one-fifth">
+                        <a href="#" class="event-item">
+                            <div class="grid grid--narrow">
+                                <div class="grid__item one-third tablet-portrait--one-whole">
+                                    <img src="assets/images/event-mobile-1.jpg" alt="Event Name" class="mobile-event-image">
+                                    <img src="assets/images/event-1.jpg" alt="Event Name" class="event-image">
+                                </div>
+
+                                <div class="grid__item two-thirds tablet-portrait--one-whole">
+                                    <h3 class="event-name">Dorly and Friends</h3>
+
+                                    <div class="event-club-pic">
+                                        <img src="assets/images/club-icon-2.jpg" alt="Spiż">
+                                    </div>
+
+                                    <p class="event-location">
+                                        <strong>The Ministry of Sound</strong>
+                                        London, Lamberth
+                                    </p>
+                                    <p class="event-distance">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span class="event-distance-label">Distance: </span>
+                                        1.2 km
+                                    </p>
+                                    <p class="guests">
+                                        <i class="fa fa-user"></i>
+                                        250
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="grid__item tablet-portrait--one-half tablet-landscape--one-third desktop--one-quarter wide-desktop--one-fifth">
+                        <a href="#" class="event-item">
+                            <div class="grid grid--narrow">
+                                <div class="grid__item one-third tablet-portrait--one-whole">
+                                    <img src="assets/images/event-mobile-1.jpg" alt="Event Name" class="mobile-event-image">
+                                    <img src="assets/images/event-1.jpg" alt="Event Name" class="event-image">
+                                </div>
+
+                                <div class="grid__item two-thirds tablet-portrait--one-whole">
+                                    <h3 class="event-name">Dorly and Friends</h3>
+
+                                    <div class="event-club-pic">
+                                        <img src="assets/images/club-icon-2.jpg" alt="Spiż">
+                                    </div>
+
+                                    <p class="event-location">
+                                        <strong>The Ministry of Sound</strong>
+                                        London, Lamberth
+                                    </p>
+                                    <p class="event-distance">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span class="event-distance-label">Distance: </span>
+                                        1.2 km
+                                    </p>
+                                    <p class="guests">
+                                        <i class="fa fa-user"></i>
+                                        250
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="grid__item tablet-portrait--one-half tablet-landscape--one-third desktop--one-quarter wide-desktop--one-fifth">
+                        <a href="#" class="event-item">
+                            <div class="grid grid--narrow">
+                                <div class="grid__item one-third tablet-portrait--one-whole">
+                                    <img src="assets/images/event-mobile-1.jpg" alt="Event Name" class="mobile-event-image">
+                                    <img src="assets/images/event-1.jpg" alt="Event Name" class="event-image">
+                                </div>
+
+                                <div class="grid__item two-thirds tablet-portrait--one-whole">
+                                    <h3 class="event-name">Dorly and Friends</h3>
+
+                                    <div class="event-club-pic">
+                                        <img src="assets/images/club-icon-2.jpg" alt="Spiż">
+                                    </div>
+
+                                    <p class="event-location">
+                                        <strong>The Ministry of Sound</strong>
+                                        London, Lamberth
+                                    </p>
+                                    <p class="event-distance">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span class="event-distance-label">Distance: </span>
+                                        1.2 km
+                                    </p>
+                                    <p class="guests">
+                                        <i class="fa fa-user"></i>
+                                        250
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="grid__item tablet-portrait--one-half tablet-landscape--one-third desktop--one-quarter wide-desktop--one-fifth">
+                        <a href="#" class="event-item">
+                            <div class="grid grid--narrow">
+                                <div class="grid__item one-third tablet-portrait--one-whole">
+                                    <img src="assets/images/event-mobile-1.jpg" alt="Event Name" class="mobile-event-image">
+                                    <img src="assets/images/event-1.jpg" alt="Event Name" class="event-image">
+                                </div>
+
+                                <div class="grid__item two-thirds tablet-portrait--one-whole">
+                                    <h3 class="event-name">Dorly and Friends</h3>
+
+                                    <div class="event-club-pic">
+                                        <img src="assets/images/club-icon-2.jpg" alt="Spiż">
+                                    </div>
+
+                                    <p class="event-location">
+                                        <strong>The Ministry of Sound</strong>
+                                        London, Lamberth
+                                    </p>
+                                    <p class="event-distance">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span class="event-distance-label">Distance: </span>
+                                        1.2 km
+                                    </p>
+                                    <p class="guests">
+                                        <i class="fa fa-user"></i>
+                                        250
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                    <article class="grid__item tablet-portrait--one-half tablet-landscape--one-third desktop--one-quarter wide-desktop--one-fifth">
+                        <a href="#" class="event-item">
+                            <div class="grid grid--narrow">
+                                <div class="grid__item one-third tablet-portrait--one-whole">
+                                    <img src="assets/images/event-mobile-1.jpg" alt="Event Name" class="mobile-event-image">
+                                    <img src="assets/images/event-1.jpg" alt="Event Name" class="event-image">
+                                </div>
+
+                                <div class="grid__item two-thirds tablet-portrait--one-whole">
+                                    <h3 class="event-name">Dorly and Friends</h3>
+
+                                    <div class="event-club-pic">
+                                        <img src="assets/images/club-icon-2.jpg" alt="Spiż">
+                                    </div>
+
+                                    <p class="event-location">
+                                        <strong>The Ministry of Sound</strong>
+                                        London, Lamberth
+                                    </p>
+                                    <p class="event-distance">
+                                        <i class="fa fa-map-marker"></i>
+                                        <span class="event-distance-label">Distance: </span>
+                                        1.2 km
+                                    </p>
+                                    <p class="guests">
+                                        <i class="fa fa-user"></i>
+                                        250
+                                    </p>
+                                </div>
+                            </div>
+                        </a>
+                    </article>
+
+                </div>
+
+            </section>
+        </div>
+
+        <header class="site-header">
+            <a href="#" class="nav-trigger">
+                <i class="fa fa-bars"></i>
+                <!-- <span class="bar-1"></span>
+                <span class="bar-2"></span>
+                <span class="bar-3"></span> -->
+            </a>
+
+            <div class="header-content">
+                <h2 class="current-city">
+                    <i class="fa fa-map-marker"></i>
+                    Katowice, Sląsk, Polska
+                </h2>
+
+                <a href="#" class="change-city">
+                    Zmień <span class="change-city-extended">miasto</span>
+                </a>
+            </div>
+
+            <nav class="main-nav">
+                <h1 class="logo"></h1>
+                <h2 class="slogan">Najwiekszy portal imprezowy</h2>
+
+                <ul>
+                    <li class="selected">
+                        <a href="#">
+                            <i class="fa fa-calendar"></i>
+                            <span class="menu-name">
+                                <span>Imprezy</span>
+                                <span class="count">1240</span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-camera"></i>
+                            <span class="menu-name">
+                                <span>Zdjęcia</span>
+                                <span class="count">12043</span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <span class="fa fa-club"><span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span></span>
+                            <span class="menu-name">
+                                <span>Kluby</span>
+                                <span class="count">633</span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-users"></i>
+                            <span class="menu-name">
+                                <span>Znajomi</span>
+                                <span class="count">633</span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-youtube-play"></i>
+                            <span class="menu-name">
+                                <span>Wideo</span>
+                                <span class="count">633</span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-bar-chart"></i>
+                            <span class="menu-name no-count">
+                                <span>Twój klub</span>
+                            </span>
+                        </a>
+                    </li>
+
+                    <li class="nav-search">
+                        <form method="post" action="">
+                            <i class="fa fa-search"></i>
+                            <input type="text" placeholder="Search...">
+                        </form>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div class="right-container">
+            <div class="mobile">
+                <img src="assets/images/right-mobile.jpg">
+            </div>
+            <div class="desktop">
+                <img src="assets/images/right-desktop.jpg">
+            </div>
+        </div>
+
+        <script src="assets/js/bower_components/jquery/dist/jquery.min.js"></script>
+        <script src="assets/js/bower_components/momentjs/moment.js"></script>
+        <script src="assets/js/bower_components/momentjs/locale/pl.js"></script>
+        <script src="assets/js/bower_components/pikaday/pikaday.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>
