@@ -9,7 +9,7 @@
     @include box-sizing(border);
 
     @include min-screen($tablet-landscape) {
-        padding-left: 280px;
+        padding-left: 200px;
         z-index: 5;
     }
     
@@ -69,6 +69,10 @@
             position: relative;
             top: 6px;
             margin-right: 4px;
+
+            @include min-screen($tablet-portrait) {
+                top: 1px;
+            }
         }
 
 

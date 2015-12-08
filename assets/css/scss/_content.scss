@@ -1,14 +1,15 @@
 .content {    
     margin-top: 55px;
-    padding-bottom: 120px;
+    padding-bottom: 50px;
 
     @include min-screen($tablet-landscape) {
-        margin-left: 268px;
+        // margin-left: 268px;
+        margin-left: 180px;
     }
 
     // advert on the right
     @include min-screen($desktop) {
-        margin-right: 221px;
+        margin-right: 180px;
         padding-bottom: 0;
     }
 
@@ -27,6 +28,19 @@
         bottom: 0;
         background-color: $black;
         z-index: 5;
+        border-top: 2px solid $yellow;
+
+        .banner-text {
+            margin: 0;
+            padding: 5px 10px;
+            position: absolute;
+            right: 0;
+            top: 0;
+            background: $yellow;
+            font-size: 10px;
+            color: $black;
+            text-decoration: none;
+        }
 
         @include min-screen($desktop) {
             display: none;
@@ -35,18 +49,39 @@
         img {
             display: block;
             max-width: 100%;
-            max-height: 120px;
+            max-height: 60px;
             margin: 0 auto;
         }
     }
 
     .desktop {
         display: none;
-        width: 220px;
+        width: 180px;
+        height: 100%;
         position: fixed;
         right: 0;
         top: 0;
         z-index: 10;
+        background: $black;
+        border-left: 4px solid $yellow;
+
+        .right-wrapper {
+            p {
+                margin: 0;
+                padding: 0;
+                a {
+                    display: block;
+                    color: $black;
+                    margin: 0;
+                    padding: 4px 0 2px;
+                    font-size: 16px;
+                    text-align: center;
+                    text-transform: uppercase;
+                    background: $yellow;
+                    text-decoration: none;
+                }
+            }
+        }
 
         img {
             display: block;

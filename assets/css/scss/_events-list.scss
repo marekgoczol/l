@@ -32,15 +32,11 @@
 
                 @include min-screen($tablet-portrait) {
                     padding: 16px 2px;
-                    font-size: 16px;
+                    font-size: 14px;
                 }
 
                 @include min-screen($tablet-landscape) {
-                    font-size: 18px;
-                }
-
-                @include min-screen($desktop) {
-                    font-size: 22px;
+                    font-size: 16px;
                 }
             }
 
@@ -76,7 +72,7 @@
         width: 100%;
         padding: 8px 16px;
         border: 0;
-        font-size: 18px;
+        font-size: 14px;
         text-transform: capitalize;
 
         @include box-sizing(border);
@@ -86,8 +82,8 @@
         }
 
         @include min-screen($tablet-portrait) {
-            padding: 15px 16px;
-            font-size: 22px;
+            padding: 12px 16px;
+            font-size: 18px;
         }
     }
 
@@ -117,12 +113,17 @@
             right: auto;
             left: 300px;
             background-image: none;
-            line-height: 52px;
+            line-height: 42px;
             font-size: 18px;
         }
 
         .fa {
             font-size: 22px;
+
+            @include min-screen($tablet-portrait) {
+                position: relative;
+                top: 2px;
+            }
         }
 
         .label {
