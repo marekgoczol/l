@@ -7,9 +7,13 @@
     text-align: center;
 
     .events-list-nav {
-        margin: 0 0 24px;
+        margin: 0 0 16px;
         padding: 0;
         list-style: none;
+
+        @include min-screen($tablet-portrait) {
+            margin: 0 0 30px;
+        }
 
         li {
             display: inline-block;
@@ -18,13 +22,18 @@
 
             a {
                 display: block;
-                padding: 12px 2px;
+                padding: 8px 2px;
                 background: $light-gray;
                 color: $black;
-                font-size: 14px;
+                font-size: 12px;
                 font-weight: 300;
                 text-decoration: none;
                 text-transform: uppercase;
+
+                @include min-screen($tablet-portrait) {
+                    padding: 16px 2px;
+                    font-size: 16px;
+                }
 
                 @include min-screen($tablet-landscape) {
                     font-size: 18px;
@@ -58,7 +67,7 @@
 
 .date-picker {
     display: inline-block;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     position: relative;
     width: 100%;
 
@@ -75,6 +84,11 @@
         &:focus {
             outline: 0;
         }
+
+        @include min-screen($tablet-portrait) {
+            padding: 15px 16px;
+            font-size: 22px;
+        }
     }
 
 
@@ -86,11 +100,11 @@
 
     .icon {
         display: block;
-        width: 60px;
+        width: 68px;
         height: 100%;
-        padding: 2px 10px;
+        padding: 2px 15px;
         font-size: 24px;
-        background: $yellow url('../images/cal-icon-down.png') 40px center no-repeat;
+        background: $yellow url('../images/cal-icon-down.png') 44px center no-repeat;
         background-size: 12px auto;
         position: absolute;
         right: 0;
@@ -99,9 +113,16 @@
 
         @include min-screen($tablet-portrait) {
             width: 120px;
+            padding: 2px 2px 2px 16px;
             right: auto;
             left: 300px;
             background-image: none;
+            line-height: 52px;
+            font-size: 18px;
+        }
+
+        .fa {
+            font-size: 22px;
         }
 
         .label {
@@ -109,7 +130,7 @@
 
             @include min-screen($tablet-portrait) {
                 display: inline-block;
-                font-size: 18px;
+                font-size: 14px;
                 white-space: nowrap;
                 overflow: visible;
             }
@@ -138,8 +159,8 @@
         .event-club-pic {
             display: none;
             float: left;
-            max-width: 50px;
-            margin-right: 12px;
+            max-width: 65px;
+            margin-right: 15px;
 
             @include min-screen($tablet-portrait) {
                 display: block;
@@ -169,6 +190,12 @@
             margin: 0 0 5px;
             padding: 0 0 5px;
             border-bottom: 1px solid #b8b8b8;
+            line-height: 15px;
+
+            @include min-screen($tablet-portrait) {
+                margin: 0 0 14px;
+                padding: 18px 0px 14px 5px;
+            }
         }
 
         .event-location {
@@ -178,6 +205,7 @@
             border-bottom: 1px solid #b8b8b8;
 
             @include min-screen($tablet-portrait) {
+                font-size: 14px;
                 border-bottom: 0;
                 margin: 0;
                 padding: 0;
