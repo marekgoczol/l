@@ -1,5 +1,9 @@
 .events-list {
     padding: 16px;
+
+    @include min-screen($tablet-landscape) {
+        padding: 26px;
+    }
 }
 
 .view-type {
@@ -37,6 +41,15 @@
 
                 @include min-screen($tablet-landscape) {
                     font-size: 16px;
+                }
+
+                .fa {
+                    position: relative;
+                    top: 1px;
+                    @include min-screen($tablet-landscape) {
+                        position: relative;
+                        top: 2px;
+                    }
                 }
             }
 
