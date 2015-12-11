@@ -26,7 +26,7 @@
 
             a {
                 display: block;
-                padding: 8px 2px;
+                padding: 12px 2px;
                 background: $light-gray;
                 color: $black;
                 font-size: 12px;
@@ -57,16 +57,17 @@
                 a {
                     background-color: $white;
                     &:after {
-                        display: block;
-                        width: 35px;
-                        height: 8px;
-                        margin: 0 auto;
-                        content: '';
-                        background: transparent url('../images/white-arrow-down.png') center bottom no-repeat;
+                        width: 0;
+                        height: 0;
+                        border-style: solid;
+                        border-width: 10px 20px 0 20px;
+                        border-color: #fff transparent transparent transparent;
+                        content: "";
                         position: absolute;
-                        bottom: -8px;
-                        right: 0;
+                        bottom: -9px;
                         left: 0;
+                        right: 0;
+                        margin: 0 auto;
                     }
                 }
             }
@@ -80,10 +81,11 @@
     position: relative;
     width: 100%;
 
-    input {
+    .datepicker-trigger {
         display: block;
+        background-color: $white;
         width: 100%;
-        padding: 8px 16px;
+        padding: 14px 16px;
         border: 0;
         font-size: 14px;
         text-transform: capitalize;
@@ -95,15 +97,9 @@
         }
 
         @include min-screen($tablet-portrait) {
+            width: 420px;
             padding: 12px 16px;
             font-size: 18px;
-        }
-    }
-
-
-    @include min-screen($tablet-portrait) {
-        input {
-            width: 420px;
         }
     }
 
@@ -111,7 +107,7 @@
         display: block;
         width: 68px;
         height: 100%;
-        padding: 2px 15px;
+        padding: 6px 15px;
         font-size: 24px;
         background: $yellow url('../images/cal-icon-down.png') 44px center no-repeat;
         background-size: 12px auto;
@@ -173,11 +169,21 @@
         .event-club-pic {
             display: none;
             float: left;
-            max-width: 65px;
-            margin-right: 15px;
+            max-width: 60px;
+            margin-right: 10px;
 
             @include min-screen($tablet-portrait) {
                 display: block;
+            }
+
+            @include min-screen($desktop) {
+                max-width: 45px;
+                margin-right: 8px;
+            }
+
+            @include min-screen($wide-desktop) {
+                max-width: 60px;
+                margin-right: 10px;
             }
 
             @include min-screen($full-hd) {
@@ -225,6 +231,14 @@
                 padding: 0;
             }
 
+            @include min-screen($desktop) {
+                font-size: 12px;
+            }
+
+            @include min-screen($wide-desktop) {
+                font-size: 14px;
+            }
+
             strong {
                 display: block;
                 margin: 0;
@@ -241,7 +255,23 @@
 
         .event-distance {
             font-size: 12px;
-            margin: 0;
+            margin: 6px 0 0;
+
+            .fa {
+                font-size: 14px;
+
+                @include min-screen($tablet-portrait) {
+                    font-size: 16px;
+                }
+            }
+
+            @include min-screen($desktop) {
+                font-size: 11px;
+            }
+
+            @include min-screen($wide-desktop) {
+                font-size: 12px;
+            }
         }
 
         .guests {

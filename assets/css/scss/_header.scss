@@ -8,17 +8,17 @@
     z-index: 10;
     @include box-sizing(border);
 
-    @include min-screen($tablet-landscape) {
-        padding-left: 210px;
+    @include min-screen($desktop) {
+        padding-left: 240px;
         z-index: 5;
     }
     
     .nav-open & {
 
         .header-content {
-            -webkit-filter: blur(4px);
+            -webkit-filter: blur(8px);
 
-            @include min-screen($tablet-landscape) {
+            @include min-screen($desktop) {
                 -webkit-filter: none;
             }
         }
@@ -39,19 +39,22 @@
         font-size: 28px;
         text-decoration: none;
 
-        @include min-screen($tablet-landscape) {
+        @include min-screen($desktop) {
             display: none;
         }
 
-        > span {
+        .fa-bars {
+            display: none;
+        }
+
+        .fa-logo {
             display: block;
-            height: 5px;
-            width: 35px;
-            margin: 0 auto;
-            background-color: $black;
+            width: 55px;
+            height: 55px;
             position: absolute;
-            left: 0;
-            right: 0;
+            top: 0px;
+            line-height: 55px;
+            font-size: 34px;
         }
     }
 

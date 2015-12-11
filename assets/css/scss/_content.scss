@@ -2,26 +2,51 @@
     margin-top: 55px;
     padding-bottom: 50px;
 
-    @include min-screen($tablet-landscape) {
-        // margin-left: 268px;
-        margin-left: 180px;
+    @include min-screen($desktop) {
+        margin-left: 210px
     }
 
     // advert on the right
-    @include min-screen($desktop) {
-        margin-right: 180px;
+    @include min-screen($tablet-landscape) {
+        // margin-right: 160px;
         padding-bottom: 0;
     }
 
+    @include max-screen(1024px) {
+        @media only screen and (orientation:'landscape') {
+            margin-right: 120px;
+            @include min-screen($tablet-portrait) {
+                margin-right: 160px;
+            }
+        }
+
+        @media only screen and (orientation:'portrait') {
+            
+        }
+    }
+
+    @include min-screen(1024px) {
+        margin-right: 160px;
+    }
+
     .nav-open & {
-        -webkit-filter: blur(4px);
-        @include min-screen($tablet-landscape) {
+        position: fixed;
+        -webkit-filter: blur(8px);
+        @include min-screen($desktop) {
             -webkit-filter: none;
         }
     }
 }
 
 .right-container {
+
+    .nav-open & {
+        -webkit-filter: blur(8px);
+        @include min-screen($desktop) {
+            -webkit-filter: none;
+        }
+    }
+
     .mobile {
         width: 100%;
         position: fixed;
@@ -29,6 +54,7 @@
         background-color: $black;
         z-index: 5;
         border-top: 2px solid $yellow;
+        @include transition(200ms);
 
         .banner-text {
             margin: 0;
@@ -42,7 +68,7 @@
             text-decoration: none;
         }
 
-        @include min-screen($desktop) {
+        @include min-screen($tablet-landscape) {
             display: none;
         }
 
@@ -56,7 +82,7 @@
 
     .desktop {
         display: none;
-        width: 180px;
+        width: 120px;
         height: 100%;
         position: fixed;
         right: 0;
@@ -64,6 +90,10 @@
         z-index: 10;
         background: $black;
         border-left: 4px solid $yellow;
+
+        @include min-screen($tablet-portrait) {
+            width: 160px;
+        }
 
         .right-wrapper {
             p {
@@ -89,8 +119,30 @@
             margin: 0 auto;
         }
 
-        @include min-screen($desktop) {
+        @include min-screen($tablet-landscape) {
             display: block;
+        }
+    }
+
+
+
+    @include max-screen(1024px) {
+        @media only screen and (orientation:'landscape') {
+            .desktop {
+                display: block;   
+            }
+            .mobile {
+                display: none;
+            }
+        }
+
+        @media only screen and (orientation:'portrait') {
+            .desktop {
+                display: none;
+            }
+            .mobile {
+                display: block;
+            }
         }
     }
 }
